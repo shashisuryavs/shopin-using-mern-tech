@@ -1,0 +1,116 @@
+/* Reset all cursors to default first */
+* {
+  cursor: default !important;
+}
+
+/* Set text cursor for text elements */
+p:not([onclick]):not(.cursor-pointer),
+span:not([onclick]):not(.cursor-pointer),
+h1:not([onclick]):not(.cursor-pointer),
+h2:not([onclick]):not(.cursor-pointer),
+h3:not([onclick]):not(.cursor-pointer),
+h4:not([onclick]):not(.cursor-pointer),
+h5:not([onclick]):not(.cursor-pointer),
+h6:not([onclick]):not(.cursor-pointer),
+div:not([onclick]):not(.cursor-pointer):not(.hover\:bg-gray-200):not(.hover\:bg-gray-400):not([role="button"]) {
+  cursor: default !important;
+}
+
+/* Set pointer cursor for clickable elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"],
+.cursor-pointer,
+a,
+a *,
+label,
+select,
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"],
+input[type="button"],
+summary,
+[onclick],
+.hover\:bg-gray-200,
+.hover\:bg-gray-400,
+.hover\:text-gray-800,
+div[onclick],
+span[onclick],
+svg[onclick] {
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Specific cursor types */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  cursor: text !important;
+}
+
+/* Fix for table cells */
+td, th {
+  cursor: default !important;
+}
+
+td[onclick], th[onclick], td.cursor-pointer, th.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Fix for SVG elements */
+svg {
+  cursor: inherit !important;
+}
+
+svg[onclick], svg.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Fix for specific Tailwind classes */
+.hover\:bg-gray-200:hover,
+.hover\:bg-gray-400:hover,
+.hover\:text-gray-800:hover {
+  cursor: pointer !important;
+}
+
+/* Fix for elements with click handlers */
+[onClick], [onclick] {
+  cursor: pointer !important;
+}
+
+/* Fix for mobile devices */
+@media (max-width: 768px) {
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  a,
+  label,
+  select,
+  .cursor-pointer,
+  [onclick],
+  div[onclick],
+  span[onclick] {
+    cursor: pointer !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+    cursor: text !important;
+  }
+}

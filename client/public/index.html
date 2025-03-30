@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Hayroo | A ecommerce website" />
+    <title>Shop in</title>
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/style.css">
+</head>
+
+<body id="page-top">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="font-light text-base text-gray-800 bg-white flex flex-col min-h-screen" id="root"></div>
+
+    <script>
+        // Fix cursor issues for elements with onClick handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add pointer cursor to elements with onClick handlers
+            const addPointerCursor = function() {
+                // Find all elements with onClick handlers
+                const elements = document.querySelectorAll('[onclick]');
+                elements.forEach(function(el) {
+                    el.style.cursor = 'pointer';
+                });
+
+                // Find all elements with cursor-pointer class
+                const pointerElements = document.querySelectorAll('.cursor-pointer');
+                pointerElements.forEach(function(el) {
+                    el.style.cursor = 'pointer';
+                });
+
+                // Find all buttons and links
+                const clickableElements = document.querySelectorAll('button, [type="button"], [type="submit"], [type="reset"], a, [role="button"]');
+                clickableElements.forEach(function(el) {
+                    el.style.cursor = 'pointer';
+                });
+
+                // Schedule next check
+                setTimeout(addPointerCursor, 1000);
+            };
+
+            // Start the process
+            addPointerCursor();
+        });
+    </script>
+</body>
+
+</html>

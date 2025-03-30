@@ -1,0 +1,94 @@
+/* Specific cursor fixes for text elements with onClick handlers */
+
+/* Fix for text elements with onClick handlers */
+span[onclick],
+div[onclick],
+p[onclick],
+h1[onclick],
+h2[onclick],
+h3[onclick],
+h4[onclick],
+h5[onclick],
+h6[onclick],
+li[onclick],
+td[onclick],
+th[onclick] {
+  cursor: pointer !important;
+}
+
+/* Fix for elements with cursor-pointer class */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Fix for hover elements */
+.hover\:bg-gray-200,
+.hover\:bg-gray-400,
+.hover\:text-gray-800 {
+  cursor: pointer !important;
+}
+
+/* Fix for SVG elements */
+svg {
+  cursor: inherit !important;
+}
+
+svg[onclick], svg.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Fix for specific components */
+.userDropdownBtn,
+.userDropdown span,
+.userDropdown li,
+[class*="cursor-pointer"] {
+  cursor: pointer !important;
+}
+
+/* Fix for buttons */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Fix for links */
+a, a * {
+  cursor: pointer !important;
+}
+
+/* Fix for form elements */
+label,
+select,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer !important;
+}
+
+/* Fix for text inputs */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="url"], 
+textarea {
+  cursor: text !important;
+}
+
+/* Fix for disabled elements */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
